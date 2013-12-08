@@ -16,8 +16,9 @@
     "rotator",
     "cycle",
     "animate"
+    "animation"
   ],
-  "license": "MIT",
+  "license": "http://ian.mit-license.org/",
   "private": false,
   "ignore": [
     "**/.*",
