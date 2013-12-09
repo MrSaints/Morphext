@@ -11,12 +11,12 @@
   ],
   "keywords": [
     "jquery",
-    "text",
-    "rotating",
-    "rotator",
+    "text rotator",
+    "rotating text",
+    "ticker",
     "cycle",
-    "animate"
-    "animation"
+    "animate.css",
+    "text animation"
   ],
   "license": "http://ian.mit-license.org/",
   "private": false,
