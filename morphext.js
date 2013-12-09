@@ -1,3 +1,14 @@
+/*!
+ * Morphext v2.0.0 - Text Rotating Plugin for jQuery
+ * https://github.com/MrSaints/Morphext
+ *
+ * Built on jQuery Boilerplate
+ * http://jqueryboilerplate.com/
+ *
+ * Copyright 2013 Ian Lai and other contributors
+ * Released under the MIT license
+ * http://ian.mit-license.org/
+ */
 ;(function ($, window, document, undefined) {
 	var pluginName = "Morphext",
 		defaults = {
