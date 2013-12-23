@@ -16,7 +16,8 @@
     "ticker",
     "cycle",
     "animate.css",
-    "text animation"
+    "text animation",
+    "carousel"
   ],
   "license": "http://ian.mit-license.org/",
   "private": false,
