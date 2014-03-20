@@ -1,4 +1,4 @@
-# Created by http://gitignore.io
+# Created by http://www.gitignore.io
 
 ### Windows ###
 # Windows image file caches
@@ -11,5 +11,50 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+
 ### Bower ###
 bower_components
+
+
+### Node ###
+lib-cov
+lcov.info
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+build
+.grunt
+
+node_modules
+
+
+### SASS ###
+### Sass Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache
+
+
+### Compass ###
+.sass-cache
+
+
+### SublimeText ###
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
