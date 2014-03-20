@@ -6,8 +6,8 @@
     "Ian Lai <ian@fyianlai.com>"
   ],
   "main": [
-    "morphext.js",
-    "morphext.css"
+    "dist/morphext.js",
+    "dist/morphext.css"
   ],
   "keywords": [
     "jquery",
