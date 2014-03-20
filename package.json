@@ -1,0 +1,29 @@
+{
+  "name": "Morphext",
+  "version": "2.0.0",
+  "description": "A simple jQuery rotating text plugin powered by Animate.css and inspired by a Dota 2 hero, Morphling.",
+  "main": "Gruntfile.coffee",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MrSaints/Morphext.git"
+  },
+  "author": "Ian Lai <ian@fyianlai.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://ian.mit-license.org/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/MrSaints/Morphext/issues"
+  },
+  "homepage": "https://github.com/MrSaints/Morphext",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-uglify": "^0.4.0"
+  }
+}
