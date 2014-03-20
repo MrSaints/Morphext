@@ -19,7 +19,7 @@
 
     function Plugin (element, options) {
         this.element = $(element);
-        
+
         this.settings = $.extend({}, defaults, options);
         this._defaults = defaults;
         this._name = pluginName;
@@ -31,12 +31,15 @@
             var $that = this;
             this.phrases = [];
 
+            this.element.addClass('morphext');
+
             $.each(this.element.text().split(this.settings.separator), function (key, value) {
                 $that.phrases.push(value);
             });
 
-            this.current = this.phrases[0];
+            this.element.html("<span>" + this.phrases.join('</span><span>') + "</span>");
 
+            this.index = -1;
             this.animate();
 
             setInterval(function () {
@@ -44,22 +47,12 @@
             }, this.settings.speed);
         },
         animate: function () {
-            this._reset();
-
-            if (typeof this.next !== "undefined" && this.next !== null)
-                this.current = this.next;
-
-            this.index = $.inArray(this.current, this.phrases);
-            if ((this.index + 1) == this.phrases.length) // Loop
+            if ((this.index + 1) === this.phrases.length)
                 this.index = -1;
 
-            this.next = this.phrases[this.index + 1];
+            ++this.index;
 
-            $("<span class='animated " + this.settings.animation + "'>" + this.current + "</span>")
-                .appendTo(this.element);
-        },
-        _reset: function () {
-            this.element.html('');
+            this.element.find('span').removeClass().eq(this.index).addClass('animated ' + this.settings.animation);
         }
     };
 
