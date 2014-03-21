@@ -1,7 +1,7 @@
 {
   "name": "Morphext",
   "version": "2.0.0",
-  "description": "A simple jQuery rotating text plugin powered by Animate.css and inspired by a Dota 2 hero, Morphling.",
+  "description": "A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.",
   "authors": [
     "Ian Lai <ian@fyianlai.com>"
   ],

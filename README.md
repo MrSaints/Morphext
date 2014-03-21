@@ -1,7 +1,7 @@
 Morphext
 ========
 
-A simple jQuery rotating / carousel text plugin powered by Animate.css and inspired by a Dota 2 hero, Morphling.
+A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.
 
 [Demo](http://www.enactuslse.co.uk/)
 
