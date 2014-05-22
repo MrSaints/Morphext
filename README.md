@@ -3,9 +3,9 @@ Morphext
 
 A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.
 
-[Website](//morphext.fyianlai.com/)
+[Website](http://morphext.fyianlai.com/)
 
-[Demo](//www.enactuslse.co.uk/)
+[Demo](http://www.enactuslse.co.uk/)
 
 
 Install
@@ -13,7 +13,7 @@ Install
 
 Download from the [project page](//github.com/MrSaints/Morphext/releases).
 
-Install with [Bower](//bower.io/): `bower install --save Morphext`
+Install with [Bower](http://bower.io/): `bower install --save Morphext`
 
 
 Usage
@@ -39,7 +39,7 @@ Usage
 Prerequisites
 -------------
 - [jQuery](http://www.jquery.com/)
-- [Animate.css](http://daneden.github.io/animate.css/)
+- [Animate.css](//daneden.github.io/animate.css/)
 
 
 License
