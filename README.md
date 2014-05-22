@@ -3,27 +3,31 @@ Morphext
 
 A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.
 
-[Demo](http://www.enactuslse.co.uk/)
+[Website](//morphext.fyianlai.com/)
+
+[Demo](//www.enactuslse.co.uk/)
 
 
 Install
 -------
 
-Download from the [project page](https://github.com/MrSaints/Morphext).
+Download from the [project page](//github.com/MrSaints/Morphext/releases).
 
-Install with [Bower](http://bower.io/): `bower install --save Morphext`
+Install with [Bower](//bower.io/): `bower install --save Morphext`
 
 
 Usage
 -----
 
-1. Include the latest jQuery library together with `morphext.min.js` and `morphext.css` into your HTML document.
+1. Import the latest Animate.css and jQuery library into your HTML.
 
-2. Encapsulate your rotating words in an element and separate each word with a comma or a separator of your choice:
+2. Import `morphext.css` and include `morphext.min.js` in your HTML document.
+
+3. Encapsulate your rotating words in an element and separate each word with a comma or a separator of your choice:
 
         I am a <span id="js-rotating">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator
 
-3. Trigger the plugin by calling Morphext() on the element containing the rotating words:
+4. Trigger the plugin by calling Morphext() on the element containing the rotating words:
 
         $("#js-rotating").Morphext({
             animation: "bounceIn", // Animation type (refer to Animate.css for a list of available animations)
