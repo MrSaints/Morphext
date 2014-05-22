@@ -5,7 +5,11 @@
 }
 
 a {
-    color: #FFF;
+    color: #A7DBD8;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 pre, code {
@@ -36,8 +40,8 @@ body {
 }
 
 .header-menu {
-    text-align: left;
     padding: .5rem;
+    text-align: left;
 }
     .header-menu.pure-menu-fixed {
         border-bottom: none !important;
@@ -81,4 +85,14 @@ body {
     .preview-content {
         font-size: 2rem;
         font-weight: 300;
+    }
+
+.footer {
+    color: #FFF;
+    padding: 2rem;
+    text-align: center;
+}
+    .hearts {
+        color: #FFB8D3;
+        font-style: normal;
     }
