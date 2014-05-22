@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #FFF;
+}
+
 pre, code {
     background: #C44D58;
     text-align: left;
