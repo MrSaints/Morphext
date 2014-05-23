@@ -20,9 +20,9 @@
         <link href="//cdn.jsdelivr.net/animatecss/3.1.0/animate.min.css" rel="stylesheet">
         <link href="assets/css/morphext.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
-
         <link rel="shortcut icon" href="favicon.ico">
+
+        <script src="//cdn.jsdelivr.net/modernizr/2.8.2/modernizr.min.js"></script>
     </head>
     <body>
         <header class="header">
@@ -93,18 +93,28 @@
             Like this? Check out <a href="http://morphist.fyianlai.com">Morphist</a>, the simplest object rotator.
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>')</script>
-        <script src="assets/js/morphext.js"></script>
         <script>
-            $("#js-rotating").Morphext({
-                animation: "bounceIn", // Animation type (refer to Animate.css for a list of available animations)
-                separator: ",", // An array of words to rotate are created based on this separator. Change it if you wish to separate the words differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
-                speed: 2000 // The delay between each word in milliseconds
-            });
-        </script>
+            Modernizr.load([
+                {
+                    load: '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js',
+                    complete: function () {
+                        if (!window.jQuery) {
+                            Modernizr.load('assets/js/jquery.js');
+                        }
+                    }
+                },
+                {
+                    load: 'assets/js/morphext.js',
+                    complete: function () {
+                        $("#js-rotating").Morphext({
+                            animation: "bounceIn", // Animation type (refer to Animate.css for a list of available animations)
+                            separator: ",", // An array of words to rotate are created based on this separator. Change it if you wish to separate the words differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
+                            speed: 2000 // The delay between each word in milliseconds
+                        });
+                    }
+                }
+            ]);
 
-        <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
