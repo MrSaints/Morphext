@@ -43,7 +43,7 @@
                             // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
                             separator: ",",
                             // The delay between the changing of each phrase in milliseconds
-                            speed: 2000
+                            speed: 2500
                         });
 
                         $("#js-animations").change(function () {
@@ -125,8 +125,18 @@
 
             <form class="pure-form">
             <select id="js-animations">
+                <optgroup label="Attention Seekers">
+                  <option value="bounce">bounce</option>
+                  <option value="flash">flash</option>
+                  <option value="pulse">pulse</option>
+                  <option value="rubberBand">rubberBand</option>
+                  <option value="shake">shake</option>
+                  <option value="swing">swing</option>
+                  <option value="tada">tada</option>
+                  <option value="wobble">wobble</option>
+                </optgroup>
                 <optgroup label="Bouncing Entrances">
-                    <option value="bounceIn">bounceIn</option>
+                    <option value="bounceIn" selected="true">bounceIn</option>
                     <option value="bounceInDown">bounceInDown</option>
                     <option value="bounceInLeft">bounceInLeft</option>
                     <option value="bounceInRight">bounceInRight</option>
@@ -161,6 +171,10 @@
                   <option value="zoomInLeft">zoomInLeft</option>
                   <option value="zoomInRight">zoomInRight</option>
                   <option value="zoomInUp">zoomInUp</option>
+                </optgroup>
+                <optgroup label="Others">
+                  <option value="lightSpeedIn">lightSpeedIn</option>
+                  <option value="rollIn">rollIn</option>
                 </optgroup>
             </select>
             </form>
