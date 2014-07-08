@@ -38,9 +38,12 @@
                     complete: function () {
                         $phrases = $("#js-rotating");
                         $phrases.Morphext({
-                            animation: "bounceIn", // Animation type (refer to Animate.css for a list of available animations)
-                            separator: ",", // An array of words to rotate are created based on this separator. Change it if you wish to separate the words differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
-                            speed: 2000 // The delay between each word in milliseconds
+                            // The [in] animation type. Refer to Animate.css for a list of available animations
+                            animation: "bounceIn",
+                            // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
+                            separator: ",",
+                            // The delay between the changing of each phrase in milliseconds
+                            speed: 2000
                         });
 
                         $("#js-animations").change(function () {
@@ -64,7 +67,7 @@
 
                 <ul class="header-nav">
                     <li><a href="#getstarted">Get Started</a></li>
-                    <li><a href="http://morphist.fyianlai.com">Morphist</a></li>
+                    <li><a href="http://morphist.fyianlai.com" title="The simplest object rotator">Morphist</a></li>
                     <li><a href="//github.com/MrSaints/Morphext">Source</a></li>
                     <li><a href="//github.com/MrSaints/Morphext/releases">Releases</a></li>
                 </ul>
@@ -73,7 +76,7 @@
 
         <div class="splash animated flipInX">
             <h1 class="splash-title">Morphing + Text = <i>Morphext</i></h1>
-            <h3 class="splash-subtitle">The simplest <abbr title="Swap out / rotate words within paragraphs">text rotator</abbr> powered by jQuery and Animate.css</h3>
+            <h3 class="splash-subtitle">The simplest <abbr title="Swap out / rotate phrases within paragraphs (inline)">text rotator</abbr> powered by jQuery and Animate.css</h3>
             <a class="pure-button pure-button-primary" href="//github.com/MrSaints/Morphext/archive/2.0.0.zip">Download (v2.0.0)</a>
             <a class="pure-button" href="//github.com/MrSaints/Morphext">Source (GitHub)</a>
         </div>
@@ -101,13 +104,13 @@
                         <h5>3. HTML:</h5>
                         <pre><code class="language-markup">I am a &lt;span id=&quot;js-rotating&quot;&gt;So Simple, Very Doge, Much Wow, Such Cool&lt;/span&gt; Text Rotator</code></pre>
 
-                        <h5>4. Initiate and <abbr title="Optional: the values specified below are the default options and may be omitted">customise</abbr> (JS):</h5>
+                        <h5>4. Initiate and <a href="//github.com/MrSaints/Morphext#options" title="Morphext's options documentation">customise</a> (JS):</h5>
                         <pre><code class="language-javascript">$(&quot;#js-rotating&quot;).Morphext({
-    // Animation type (refer to Animate.css for a list of available animations)
+    // The [in] animation type. Refer to Animate.css for a list of available animations
     animation: "bounceIn",
-    // An array of words to rotate are created based on this separator. Change it if you wish to separate the words differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
+    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool)
     separator: ",",
-    // The delay between each word in milliseconds
+    // The delay between the changing of each phrase in milliseconds
     speed: 2000
 });</code></pre>
                     </div>
@@ -116,7 +119,7 @@
         </div>
 
         <div class="preview">
-            <h2 class="block-title">Preview (Words in a paragraph)</h2>
+            <h2 class="block-title">Preview (Phrases in a paragraph)</h2>
 
             <h3 class="preview-content">I am a <span id="js-rotating">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h3>
 
