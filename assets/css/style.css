@@ -60,6 +60,7 @@ body {
 /* Demo */
 .preview {
     background: rgb(230, 230, 230);
+    overflow: hidden;
     padding: 2rem 0;
     text-align: center;
 }
