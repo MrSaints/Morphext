@@ -6,9 +6,7 @@ A simple jQuery rotating / carousel plugin for text phrases powered by [Animate.
 > A jQuery plugin for creating text-based carousels, rotating small or large pieces of text one after the other, just like a slider does with images... This can be a great tool for displaying catch phrases, mission statements, tag lines, and so on.
 
 
-[Website][website]
-
-[Demo][demo]
+[Website][website] / [Demo][demo]
 
 
 Install
@@ -48,18 +46,27 @@ Morphext exposes the following options to alter the behaviour of the plugin:
 
 They may be used like so:
 
-        $("#js-rotating").Morphext({
-                animation: "fadeIn", // Overrides default "bounceIn"
-                separator: "|", // Overrides default ","
-                speed: 3000 // Overrides default 2000
-        });
+    $("#js-rotating").Morphext({
+        animation: "fadeIn", // Overrides default "bounceIn"
+        separator: "|", // Overrides default ","
+        speed: 3000 // Overrides default 2000
+    });
 
 The plugin relies heavily on [Animate.css][animatecss] for its [smooth, high performance animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) to transition between each phrase. Thus, the default animation speed (different from the interval between each phrase as described above) may be altered via CSS:
 
-        #yourElement, .yourClass {
-                /* Overrides Animate.css 1s duration */
-                -vendor-animation-duration: 3s;
-        }
+    #yourElement, .yourClass {
+        /* Overrides Animate.css 1s duration */
+        -vendor-animation-duration: 3s;
+    }
+
+
+"Problems"
+----------
+- __Viewport:__ Certain animations (e.g. "up" and "down") by [Animate.css][animatecss] involves translating the element beyond the viewport thereby leading to unintended vertical and/or horizontal whitespace (further evident by the scrollbar "following" the animation effect. This is not a bug. It may be eradicated by applying `overflow: hidden;` (CSS) to the parent of the element being animated.
+- __JavaScript:__ JavaScript is required for [Animate.css][animatecss] [CSS animation] classes to be added / removed thereby creating the "transitioning effect". If JavaScript is disabled or unavailable, nothing will happen. All the phrases and its separator will be shown as it is (silent degradation).
+- __CSS3:__ [Animate.css][animatecss] relies on CSS3 animations and transformations (available in most modern browsers). If CSS3 is disabled or unavailable, the phrases will continue to transition from one to another (assuming JavaScript is enabled), but there will be no animation effect. No fallback is provided by this plugin. You may however, handle the fallback through the use of Modernizr and polyfills.
+
+Should you encounter any problems or require assistance with this plugin, simply open a GitHub issue in this repository or you may contact [me via Twitter][twitter].
 
 
 Prerequisites
@@ -73,6 +80,7 @@ License
 Morphext is licensed under the MIT license [(http://ian.mit-license.org/)](http://ian.mit-license.org/).
 
   [website]: http://morphext.fyianlai.com/
+  [twitter]: //www.twitter.com/MrSaints
   [demo]: http://www.enactuslse.co.uk/
   [downloads]: //github.com/MrSaints/Morphext/releases
   
