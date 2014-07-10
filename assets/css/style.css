@@ -67,6 +67,17 @@ body {
         font-size: 2rem;
         font-weight: 300;
     }
+    #js-noPreview {
+        display: none;
+    }
+
+/* Form controls */
+.button-enable {
+    background: #556270;
+}
+.button-disable {
+    background: #FF6B6B;
+}
 
 /* Footer */
 .footer {
