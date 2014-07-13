@@ -40,9 +40,11 @@ Options
 
 Morphext exposes the following options to alter the behaviour of the plugin:
 
-- __animation:__ The [in] animation type. Refer to [Animate.css][animatecss] for a list of available animations. _Default: "bounceIn" (string)_
-- __separator:__ An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool). _Default: "," (string)_
-- __speed:__ The delay between the changing of each phrase in milliseconds. _Default: 2000 (int)_
+Option | Type | Default | Description
+--- | --- | --- | ---
+animation | `string` | `bounceIn` | The [in] animation type. Refer to [Animate.css][animatecss] for a list of available animations.
+separator | `string` | `,` | An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple / Very Doge / Much Wow / Such Cool).
+speed | `int` | `2000` | The delay between the changing of each phrase in milliseconds.
 
 They may be used like so:
 
@@ -60,11 +62,14 @@ The plugin relies heavily on [Animate.css][animatecss] for its [smooth, high per
     }
 
 
-"Problems"
+"Issues"
 ----------
-- __Viewport:__ Certain animations (e.g. "up" and "down") by [Animate.css][animatecss] involves translating the element beyond the viewport thereby leading to unintended vertical and/or horizontal whitespace (further evident by the scrollbar "following" the animation effect. This is not a bug. It may be eradicated by applying `overflow: hidden;` (CSS) to the parent of the element being animated.
-- __JavaScript:__ JavaScript is required for [Animate.css][animatecss] [CSS animation] classes to be added / removed thereby creating the "transitioning effect". If JavaScript is disabled or unavailable, nothing will happen. All the phrases and its separator will be shown as it is (silent degradation).
-- __CSS3:__ [Animate.css][animatecss] relies on CSS3 animations and transformations (available in most modern browsers). If CSS3 is disabled or unavailable, the phrases will continue to transition from one to another (assuming JavaScript is enabled), but there will be no animation effect. No fallback is provided by this plugin. You may however, handle the fallback through the use of Modernizr and polyfills.
+
+Issue | Description | Solution
+--- | --- | ---
+Viewport | Certain animations (e.g. "up" and "down") by [Animate.css][animatecss] involves translating the element beyond the viewport thereby leading to unintended vertical and/or horizontal whitespace (further evident by the scrollbar "following" the animation effect. This is not a bug. | It may be eradicated by applying `overflow: hidden;` (CSS) to the parent of the element being animated.
+JavaScript | JavaScript is required for [Animate.css][animatecss] [CSS animation] classes to be added / removed thereby creating the "transitioning effect". If JavaScript is disabled or unavailable, nothing will happen. All the phrases and its separator will be shown as it is (graceful degradation). | N/A
+CSS3 | [Animate.css][animatecss] relies on CSS3 animations and transformations (available in most modern browsers). If CSS3 is disabled or unavailable, the phrases will continue to transition from one to another (assuming JavaScript is enabled), but there will be no animation effect. | No fallback is provided by this plugin. You may however, handle the fallback through the use of [Modernizr](http://modernizr.com/) (for feature detection) and [polyfills](http://html5polyfill.com/).
 
 Should you encounter any problems or require assistance with this plugin, simply open a GitHub issue in this repository or you may contact [me via Twitter][twitter].
 
