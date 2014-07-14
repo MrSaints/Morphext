@@ -3,7 +3,7 @@ Morphext
 
 A simple jQuery rotating / carousel plugin for text phrases powered by [Animate.css][animatecss] and inspired by a Dota 2 hero, Morphling. It is more succinctly described by [Softpedia](http://webscripts.softpedia.com/script/Text-Management/Text-Tools/Morphext-82875.html) as:
 
-> A jQuery plugin for creating text-based carousels, rotating small or large pieces of text one after the other, just like a slider does with images... This can be a great tool for displaying catch phrases, mission statements, tag lines, and so on.
+> A [jQuery][jquery] plugin for creating text-based carousels, rotating small or large pieces of text one after the other, just like a slider does with images... This can be a great tool for displaying catch phrases, mission statements, tag lines, and so on.
 
 
 [Website][website] / [Demo][demo]
@@ -20,7 +20,7 @@ Install with [Bower][bower]: `bower install --save Morphext`
 Usage
 -----
 
-1. Import the latest Animate.css and jQuery library into your HTML.
+1. Import the latest [Animate.css][animatecss] and [jQuery][jquery] library into your HTML.
 
 2. Import `morphext.css` and include `morphext.min.js` in your HTML document.
 
@@ -76,12 +76,14 @@ Should you encounter any problems or require assistance with this plugin, simply
 
 Prerequisites
 -------------
+
 - [jQuery][jquery]
 - [Animate.css][animatecss]
 
 
 License
 -------
+
 Morphext is licensed under the MIT license [(http://ian.mit-license.org/)](http://ian.mit-license.org/).
 
   [website]: http://morphext.fyianlai.com/
