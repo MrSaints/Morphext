@@ -1,12 +1,12 @@
 {
   "name": "Morphext",
   "version": "2.1.0",
-  "description": "A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.",
+  "description": "A simple, high-performance and cross-browser jQuery rotating / carousel plugin for text phrases powered by Animate.css.",
   "authors": [
     "Ian Lai <ian@fyianlai.com>"
   ],
   "main": [
-    "dist/morphext.js",
+    "dist/morphext.min.js",
     "dist/morphext.css"
   ],
   "keywords": [
@@ -17,7 +17,8 @@
     "cycle",
     "animate.css",
     "text animation",
-    "carousel"
+    "carousel",
+    "inline"
   ],
   "license": "http://ian.mit-license.org/",
   "private": false,
@@ -29,7 +30,7 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "~3.1.1",
+    "animate.css": "~3.2.1",
     "jquery": "~2.1.1"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Morphext",
-  "version": "2.0.0",
-  "description": "A simple jQuery rotating / carousel plugin for text phrases powered by Animate.css and inspired by a Dota 2 hero, Morphling.",
+  "version": "2.1.0",
+  "description": "A simple, high-performance and cross-browser jQuery rotating / carousel plugin for text phrases powered by Animate.css.",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/MrSaints/Morphext",
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-uglify": "^0.4.0"
+    "grunt": "^0.4.6-0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0"
   }
 }
