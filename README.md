@@ -1,10 +1,11 @@
 Morphext
 ========
 
-A simple jQuery rotating / carousel plugin for text phrases powered by [Animate.css][animatecss] and inspired by a Dota 2 hero, Morphling. It is more succinctly described by [Softpedia](http://webscripts.softpedia.com/script/Text-Management/Text-Tools/Morphext-82875.html) as:
+A simple, high-performance and cross-browser [jQuery][jquery] rotating / carousel plugin for text phrases powered by [Animate.css][animatecss]. It is more succinctly described by [Softpedia](http://webscripts.softpedia.com/script/Text-Management/Text-Tools/Morphext-82875.html) as:
 
 > A [jQuery][jquery] plugin for creating text-based carousels, rotating small or large pieces of text one after the other, just like a slider does with images... This can be a great tool for displaying catch phrases, mission statements, tag lines, and so on.
 
+If you would like to achieve a similar effect with more flexibility (e.g. out animation) and with HTML objects rather than text phrases (e.g. unordered list items), please check out [Morphist][morphist].
 
 [Website][website] / [Demo][demo]
 
@@ -81,6 +82,19 @@ Prerequisites
 - [Animate.css][animatecss]
 
 
+Others
+------
+
+Native ports of Morphext have been developed in other JavaScript frameworks (e.g. [React](http://facebook.github.io/react/) and [Polymer](http://www.polymer-project.org/)):
+
+- [Morphext React][morphext-react]
+- [Morphext Polymer][morphext-polymer]
+
+They are not part of the official plugin development and the approach used in developing these ports may not be idiomatic. Please use them at your own risk.
+
+Issues and pull requests are welcomed.
+
+
 License
 -------
 
@@ -94,3 +108,7 @@ Morphext is licensed under the MIT license [(http://ian.mit-license.org/)](http:
   [bower]: http://bower.io/
   [jquery]: //www.jquery.com/
   [animatecss]: //daneden.github.io/animate.css/
+
+  [morphist]: //github.com/MrSaints/Morphist
+  [morphext-react]: //gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-react-jsx
+  [morphext-polymer]: //gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-polymer-html
