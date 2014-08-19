@@ -5,11 +5,16 @@
  * Built on jQuery Boilerplate
  * http://jqueryboilerplate.com/
  *
- * Copyright 2013 Ian Lai and other contributors
+ * Copyright 2014 Ian Lai and other contributors
  * Released under the MIT license
  * http://ian.mit-license.org/
  */
-;(function ($, window, document, undefined) {
+
+/*eslint-env browser */
+/*global jQuery:false */
+/*eslint-disable no-underscore-dangle */
+
+(function ($) {
     var pluginName = "Morphext",
         defaults = {
             animation: "bounceIn",
@@ -31,7 +36,7 @@
             var $that = this;
             this.phrases = [];
 
-            this.element.addClass('morphext');
+            this.element.addClass("morphext");
 
             $.each(this.element.text().split(this.settings.separator), function (key, value) {
                 $that.phrases.push(value);
@@ -45,8 +50,9 @@
             }, this.settings.speed);
         },
         animate: function () {
-            if ((this.index + 1) === this.phrases.length)
+            if ((this.index + 1) === this.phrases.length) {
                 this.index = -1;
+            }
             ++this.index;
 
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
@@ -60,4 +66,4 @@
             }
         });
     };
-})(jQuery, window, document);
+})(jQuery);
