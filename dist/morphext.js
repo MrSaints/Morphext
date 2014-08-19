@@ -1,5 +1,5 @@
 /*!
- * Morphext v2.0.0 - Text Rotating Plugin for jQuery
+ * Morphext v2.1.1 - Text Rotating Plugin for jQuery
  * https://github.com/MrSaints/Morphext
  *
  * Built on jQuery Boilerplate
@@ -37,8 +37,6 @@
                 $that.phrases.push(value);
             });
 
-            this.element.html("<span>" + this.phrases.join('</span><span>') + "</span>");
-
             this.index = -1;
             this.animate();
 
@@ -49,10 +47,9 @@
         animate: function () {
             if ((this.index + 1) === this.phrases.length)
                 this.index = -1;
-
             ++this.index;
 
-            this.element.find('span').removeClass().eq(this.index).addClass('animated ' + this.settings.animation);
+            this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
         }
     };
 
