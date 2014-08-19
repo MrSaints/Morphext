@@ -23,7 +23,7 @@
   "homepage": "https://github.com/MrSaints/Morphext",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.5.1"
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-eslint": "^1.0.0"
   }
 }

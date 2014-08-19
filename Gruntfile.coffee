@@ -10,11 +10,11 @@ module.exports = (grunt) ->
                 files:
                     'dist/morphext.min.js': ['dist/morphext.js']
 
-        jshint:
+        eslint:
             all: ['dist/morphext.js']
 
-    grunt.loadNpmTasks 'grunt-contrib-jshint';
-    grunt.loadNpmTasks 'grunt-contrib-uglify';
+    grunt.loadNpmTasks 'grunt-contrib-uglify'
+    grunt.loadNpmTasks 'grunt-eslint'
 
-    grunt.registerTask('default', ['uglify', 'test']);
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask 'default', ['uglify', 'test']
+    grunt.registerTask 'test', ['eslint']
