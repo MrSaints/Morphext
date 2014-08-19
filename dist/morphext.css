@@ -1,5 +1,5 @@
-.morphext > span {
-	display: none;
+.morphext {
+	will-change: contents;
 }
 
 .morphext > .animated {
