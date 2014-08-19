@@ -1,6 +1,8 @@
 Morphext
 ========
 
+[![Dev Dependency Status](https://david-dm.org/MrSaints/Morphext/dev-status.svg?style=flat)](https://david-dm.org/MrSaints/Morphext#info=devDependencies)
+
 A simple, high-performance and cross-browser [jQuery][jquery] rotating / carousel plugin for text phrases powered by [Animate.css][animatecss]. It is more succinctly described by [Softpedia](http://webscripts.softpedia.com/script/Text-Management/Text-Tools/Morphext-82875.html) as:
 
 > A [jQuery][jquery] plugin for creating text-based carousels, rotating small or large pieces of text one after the other, just like a slider does with images... This can be a great tool for displaying catch phrases, mission statements, tag lines, and so on.
