@@ -1,7 +1,3 @@
-.morphext {
-	will-change: contents;
-}
-
 .morphext > .animated {
     display: inline-block;
 }
