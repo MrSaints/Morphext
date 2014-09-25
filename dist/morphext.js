@@ -1,5 +1,5 @@
 /*!
- * Morphext v2.1.1 - Text Rotating Plugin for jQuery
+ * Morphext - Text Rotating Plugin for jQuery
  * https://github.com/MrSaints/Morphext
  *
  * Built on jQuery Boilerplate
@@ -27,12 +27,11 @@
 
         this.settings = $.extend({}, defaults, options);
         this._defaults = defaults;
-        this._name = pluginName;
-        this.init();
+        this._init();
     }
 
     Plugin.prototype = {
-        init: function () {
+        _init: function () {
             var $that = this;
             this.phrases = [];
 
@@ -44,10 +43,7 @@
 
             this.index = -1;
             this.animate();
-
-            setInterval(function () {
-                $that.animate();
-            }, this.settings.speed);
+            this.start();
         },
         animate: function () {
             if ((this.index + 1) === this.phrases.length) {
@@ -56,6 +52,15 @@
             ++this.index;
 
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+        },
+        start: function () {
+            var $that = this;
+            this._interval = setInterval(function () {
+                $that.animate();
+            }, this.settings.speed);
+        },
+        stop: function () {
+            this._interval = clearInterval(this._interval);
         }
     };
 
