@@ -15,6 +15,8 @@
 /*eslint-disable no-underscore-dangle */
 
 (function ($) {
+    "use strict";
+
     var pluginName = "Morphext",
         defaults = {
             animation: "bounceIn",
