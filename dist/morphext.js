@@ -19,7 +19,8 @@
         defaults = {
             animation: "bounceIn",
             separator: ",",
-            speed: 2000
+            speed: 2000,
+            complete: $.noop
         };
 
     function Plugin (element, options) {
@@ -38,7 +39,7 @@
             this.element.addClass("morphext");
 
             $.each(this.element.text().split(this.settings.separator), function (key, value) {
-                $that.phrases.push(value);
+                $that.phrases.push(value.trim());
             });
 
             this.index = -1;
@@ -52,6 +53,10 @@
             ++this.index;
 
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+
+            if ($.isFunction(this.settings.complete)) {
+                this.settings.complete.call(this);
+            }
         },
         start: function () {
             var $that = this;
