@@ -16,5 +16,5 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-uglify'
     grunt.loadNpmTasks 'grunt-eslint'
 
-    grunt.registerTask 'default', ['uglify', 'test']
+    grunt.registerTask 'default', ['test', 'uglify']
     grunt.registerTask 'test', ['eslint']
