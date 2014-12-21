@@ -20,6 +20,7 @@
     var pluginName = "Morphext",
         defaults = {
             animation: "bounceIn",
+            letters: false,
             separator: ",",
             speed: 2000,
             complete: $.noop
@@ -54,7 +55,18 @@
             }
             ++this.index;
 
-            this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+            if (this.settings.letters) {
+                var $that = this;
+                this.element[0].innerHTML = "";
+                $.each(this.phrases[this.index].split(""), function(key, value) {
+                    value = value === " " ? "&nbsp;" : value;
+                    setTimeout(function () {
+                        $that.element.append("<span class=\"animated " + $that.settings.animation + "\">" + value + "</span>");
+                    }, key * 100);
+                });
+            } else {
+                this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+            }
 
             if ($.isFunction(this.settings.complete)) {
                 this.settings.complete.call(this);
