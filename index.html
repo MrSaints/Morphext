@@ -19,7 +19,10 @@
         <script src="dist/morphext.js"></script>
         <script>
             $("#js-rotating").Morphext({
-                animation: "rotateIn"
+                animation: "rotateIn",
+                complete: function () {
+                    console.log("This is called after a phrase is animated in! Current phrase index: " + this.index);
+                }
             });
         </script>
     </body>
