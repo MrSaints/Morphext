@@ -29,11 +29,15 @@ Usage
 
 3. Encapsulate your rotating phrases in an element and separate each phrase with a comma or a separator of your choice:
 
-        I am a <span id="js-rotating">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator
+    ```html
+    I am a <span id="js-rotating">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator
+    ```
 
 4. Trigger the plugin by calling Morphext() on the element containing the rotating phrases:
 
-        $("#js-rotating").Morphext();
+    ```js
+    $("#js-rotating").Morphext();
+    ```
 
 A demo titled `index.html` is included in this repository. Open it to see the end-result.
 
@@ -48,21 +52,29 @@ Option | Type | Default | Description
 animation | `string` | `bounceIn` | The [in] animation type. Refer to [Animate.css][animatecss] for a list of available animations.
 separator | `string` | `,` | An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple / Very Doge / Much Wow / Such Cool).
 speed | `int` | `2000` | The delay between the changing of each phrase in milliseconds.
+complete | `object Function` | `null` | A callback that is executed after an item is animated in.
 
 They may be used like so:
 
-    $("#js-rotating").Morphext({
-        animation: "fadeIn", // Overrides default "bounceIn"
-        separator: "|", // Overrides default ","
-        speed: 3000 // Overrides default 2000
-    });
+```js
+$("#js-rotating").Morphext({
+    animation: "fadeIn", // Overrides default "bounceIn"
+    separator: "|", // Overrides default ","
+    speed: 3000, // Overrides default 2000
+    complete: function () {
+        // Overrides default empty function
+    }
+});
+```
 
 The plugin relies heavily on [Animate.css][animatecss] for its [smooth, high performance animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) to transition between each phrase. Thus, the default animation speed (different from the interval between each phrase as described above) may be altered via CSS:
 
-    #yourElement, .yourClass {
-        /* Overrides Animate.css 1s duration */
-        -vendor-animation-duration: 3s;
-    }
+```css
+#yourElement, .yourClass {
+    /* Overrides Animate.css 1s duration */
+    -vendor-animation-duration: 3s;
+}
+```
 
 
 "Issues"
@@ -103,14 +115,14 @@ License
 Morphext is licensed under the MIT license [(http://ian.mit-license.org/)](http://ian.mit-license.org/).
 
   [website]: http://morphext.fyianlai.com/
-  [twitter]: //www.twitter.com/MrSaints
+  [twitter]: https://www.twitter.com/MrSaints
   [demo]: http://www.enactuslse.co.uk/
-  [downloads]: //github.com/MrSaints/Morphext/releases
-  
+  [downloads]: https://github.com/MrSaints/Morphext/releases
+
   [bower]: http://bower.io/
-  [jquery]: //www.jquery.com/
+  [jquery]: https://www.jquery.com/
   [animatecss]: //daneden.github.io/animate.css/
 
-  [morphist]: //github.com/MrSaints/Morphist
-  [morphext-react]: //gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-react-jsx
-  [morphext-polymer]: //gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-polymer-html
+  [morphist]: https://github.com/MrSaints/Morphist
+  [morphext-react]: https://gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-react-jsx
+  [morphext-polymer]: https://gist.github.com/MrSaints/7e84c68c086d5a6a3ee2#file-morphext-polymer-html
