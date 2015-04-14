@@ -17,16 +17,16 @@
             <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
         <!--<![endif]-->
 
-        <link href="//cdn.jsdelivr.net/animatecss/3.1.1/animate.min.css" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/animatecss/3.2.6/animate.min.css" rel="stylesheet">
         <link href="assets/css/morphext.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico">
 
-        <script src="//cdn.jsdelivr.net/modernizr/2.8.2/modernizr.min.js"></script>
+        <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js"></script>
         <script>
             Modernizr.load([
                 {
-                    load: '//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js',
+                    load: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js',
                     complete: function () {
                         if (!window.jQuery) {
                             Modernizr.load('assets/js/jquery.js');
@@ -37,7 +37,7 @@
                     load: 'assets/js/morphext.js',
                     complete: function () {
                         $phrases = $("#js-rotating");
-                        $phrases.Morphext({
+                        var morphext = $phrases.Morphext({
                             // The [in] animation type. Refer to Animate.css for a list of available animations.
                             animation: "bounceIn",
                             // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
@@ -48,7 +48,8 @@
 
                         // Preview controls
                         $("#js-animations").change(function () {
-                             $phrases.Morphext('setAnimation', $(this).val())
+                            var plugin = morphext.data("plugin_Morphext");
+                            plugin.settings.animation = $(this).val();
                         });
 
                         $previewMode = true;
@@ -79,8 +80,8 @@
 
                 <ul class="header-nav">
                     <li><a href="#getstarted">Get Started</a></li>
-                    <li><a href="//github.com/MrSaints/Morphext#morphext" title="README">Docs</a></li>
-                    <li><a href="//github.com/MrSaints/Morphext/releases">Releases</a></li>
+                    <li><a href="https://github.com/MrSaints/Morphext#morphext" title="README">Docs</a></li>
+                    <li><a href="https://github.com/MrSaints/Morphext/releases">Releases</a></li>
                     <li><a href="http://morphist.fyianlai.com" title="The simplest object rotator">Morphist</a></li>
                 </ul>
             </div>
@@ -89,8 +90,8 @@
         <div class="splash animated flipInX">
             <h1 class="splash-title">Morphing + Text = <i>Morphext</i></h1>
             <h3 class="splash-subtitle">The simplest <abbr title="Swap out / rotate phrases within paragraphs (inline)">text rotator</abbr> powered by jQuery and Animate.css</h3>
-            <a class="pure-button pure-button-primary" href="//github.com/MrSaints/Morphext/archive/2.0.0.zip">Download (v2.0.0)</a>
-            <a class="pure-button" href="//github.com/MrSaints/Morphext">Source (GitHub)</a>
+            <a class="pure-button pure-button-primary" href="https://github.com/MrSaints/Morphext/archive/2.3.4.zip">Download (v2.3.4)</a>
+            <a class="pure-button" href="https://github.com/MrSaints/Morphext">Source (GitHub)</a>
         </div>
 
         <div id="getstarted" class="instructions">
@@ -99,13 +100,13 @@
                     <div class="box">
                         <h2 class="block-title">Installation</h2>
 
-                        <h5>1. <a href="//github.com/MrSaints/Morphext/archive/2.0.0.zip">Direct download link</a> or via <a href="http://bower.io/" title="A package manager for the web">Bower</a>:</h5>
+                        <h5>1. <a href="https://github.com/MrSaints/Morphext/archive/2.3.4.zip">Direct download link</a> or via <a href="http://bower.io/" title="A package manager for the web">Bower</a>:</h5>
                         <pre><code class="language-bash">bower install Morphext --save</code></pre>
 
                         <h5>2a. Import CSS (Prerequisite: <a href="//daneden.github.io/animate.css/">Animate.css</a>):</h5>
                         <pre><code class="language-markup">&lt;link rel="stylesheet" href="bower_components/Morphext/dist/morphext.css"&gt;</code></pre>
 
-                        <h5>2b. Import JS (Prerequisite: <a href="//jquery.com">jQuery</a>):</h5>
+                        <h5>2b. Import JS (Prerequisite: <a href="https://jquery.com">jQuery</a>):</h5>
                         <pre><code class="language-markup">&lt;script src="bower_components/Morphext/dist/morphext.min.js"&gt;&lt;script&gt;</code></pre>
                     </div>
                 </div>
@@ -113,17 +114,20 @@
                     <div class="box">
                         <h2 class="block-title">Usage</h2>
 
-                        <h5>3. HTML:</h5>
+                        <h5>3. HTML <a href="https://github.com/MrSaints/Morphext/blob/master/index.html">(Example)</a>:</h5>
                         <pre><code class="language-markup">I am a &lt;span id=&quot;js-rotating&quot;&gt;So Simple, Very Doge, Much Wow, Such Cool&lt;/span&gt; Text Rotator</code></pre>
 
-                        <h5>4. Initiate and <a href="//github.com/MrSaints/Morphext#options" title="Morphext's options documentation">customise</a> (JS):</h5>
+                        <h5>4. Initiate and <a href="https://github.com/MrSaints/Morphext#options" title="Morphext's options documentation">customise</a> (JS):</h5>
                         <pre><code class="language-javascript">$(&quot;#js-rotating&quot;).Morphext({
     // The [in] animation type. Refer to Animate.css for a list of available animations.
     animation: "bounceIn",
     // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
     separator: ",",
     // The delay between the changing of each phrase in milliseconds.
-    speed: 2000
+    speed: 2000,
+    complete: function () {
+        // Called after the entrance animation is executed.
+    }
 });</code></pre>
                     </div>
                 </div>
