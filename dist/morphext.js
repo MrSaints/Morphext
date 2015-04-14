@@ -49,11 +49,7 @@
             this.start();
         },
         animate: function () {
-            if ((this.index + 1) === this.phrases.length) {
-                this.index = -1;
-            }
-            ++this.index;
-
+            this.index = ++this.index % this.phrases.length;
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
 
             if ($.isFunction(this.settings.complete)) {
