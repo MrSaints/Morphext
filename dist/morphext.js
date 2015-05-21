@@ -41,7 +41,7 @@
             this.element.addClass("morphext");
 
             $.each(this.element.text().split(this.settings.separator), function (key, value) {
-                $that.phrases.push(value.trim());
+                $that.phrases.push($.trim(value));
             });
 
             this.index = -1;
