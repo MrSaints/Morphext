@@ -1,7 +1,3 @@
-.morphext > span {
-    display: none;
-}
-
 .morphext > .animated {
     display: inline-block;
 }
