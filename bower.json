@@ -1,9 +1,9 @@
 {
   "name": "Morphext",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "A simple, high-performance and cross-browser jQuery rotating / carousel plugin for text phrases powered by Animate.css.",
   "authors": [
-    "Ian Lai <ian@fyianlai.com>"
+    "Ian Lai <os@fyianlai.com>"
   ],
   "main": [
     "dist/morphext.min.js",
@@ -20,7 +20,7 @@
     "carousel",
     "inline"
   ],
-  "license": "http://ian.mit-license.org/",
+  "license": "MIT",
   "private": false,
   "ignore": [
     "**/.*",
