@@ -22,7 +22,8 @@
             animation: "bounceIn",
             separator: ",",
             speed: 2000,
-            complete: $.noop
+            complete: $.noop,
+            type: "text"//text|html
         };
 
     function Plugin (element, options) {
@@ -40,7 +41,7 @@
 
             this.element.addClass("morphext");
 
-            $.each(this.element.text().split(this.settings.separator), function (key, value) {
+            $.each(this.element[this.settings.type]().split(this.settings.separator), function (key, value) {
                 $that.phrases.push($.trim(value));
             });
 
