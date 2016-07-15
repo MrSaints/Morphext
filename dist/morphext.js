@@ -22,6 +22,7 @@
             animation: "bounceIn",
             separator: ",",
             speed: 2000,
+            activeClass: 'active',
             complete: $.noop
         };
 
@@ -44,13 +45,17 @@
                 $that.phrases.push($.trim(value));
             });
 
-            this.index = -1;
-            this.animate();
-            this.start();
+            
+							this.index = -1;
+							this.animate();
+							this.start();
+						
+           
         },
         animate: function () {
             this.index = ++this.index % this.phrases.length;
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+            this.element[0].classList.add(this.settings.activeClass);
 
             if ($.isFunction(this.settings.complete)) {
                 this.settings.complete.call(this);
