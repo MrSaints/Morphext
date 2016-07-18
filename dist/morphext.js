@@ -49,9 +49,7 @@
                 
             });
             this.loops = this.settings.loop * this.phrases.length;   
-            
-            //console.log(this.loops); 
-            
+                        
             this.index = -1;
             this.animate();
             this.start();                  	
