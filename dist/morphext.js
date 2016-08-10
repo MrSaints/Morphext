@@ -22,6 +22,8 @@
             animation: "bounceIn",
             separator: ",",
             speed: 2000,
+            activeClass: 'active',
+            loop: 10, // loop n times around TBC
             complete: $.noop
         };
 
@@ -36,22 +38,35 @@
     Plugin.prototype = {
         _init: function () {
             var $that = this;
+            this.position = 0;
+            this.loops = 0;
             this.phrases = [];
 
             this.element.addClass("morphext");
 
             $.each(this.element.text().split(this.settings.separator), function (key, value) {
                 $that.phrases.push($.trim(value));
+                
             });
-
+            this.loops = this.settings.loop * this.phrases.length;   
+                        
             this.index = -1;
             this.animate();
-            this.start();
+            this.start();                  	
+           
         },
         animate: function () {
+            this.position++;
             this.index = ++this.index % this.phrases.length;
             this.element[0].innerHTML = "<span class=\"animated " + this.settings.animation + "\">" + this.phrases[this.index] + "</span>";
+            this.element[0].classList.add(this.settings.activeClass);
 
+            
+              
+            //console.log(this.position);   
+            if(this.position == this.loops){
+                this.stop(); 
+            }
             if ($.isFunction(this.settings.complete)) {
                 this.settings.complete.call(this);
             }
