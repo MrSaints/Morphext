@@ -4,6 +4,7 @@
   "description": "A simple, high-performance and cross-browser jQuery rotating / carousel plugin for text phrases powered by Animate.css.",
   "main": "Gruntfile.coffee",
   "scripts": {
+    "build": "grunt uglify",
     "test": "grunt test"
   },
   "repository": {
