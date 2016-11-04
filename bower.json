@@ -1,6 +1,6 @@
 {
   "name": "Morphext",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "description": "A simple, high-performance and cross-browser jQuery rotating / carousel plugin for text phrases powered by Animate.css.",
   "authors": [
     "Ian Lai <os@fyianlai.com>"
@@ -30,7 +30,7 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "~3.4.0",
-    "jquery": "~3.0.0-alpha1"
+    "animate.css": "~3.5.2",
+    "jquery": "~3.1.1"
   }
 }
